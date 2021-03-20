@@ -1,3 +1,4 @@
+import 'package:covid19_stats/CustomNavigationDrawer/CollapsingNavigationDrawer.dart';
 import 'package:covid19_stats/CustomSwitch/AnimatedSwitch.dart';
 import 'package:covid19_stats/Localization/app_localizations.dart';
 import 'package:covid19_stats/Notifier/ThemeNotifier.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: theme.getTheme(),
         home: Scaffold(
+          drawer: CollapsingNavigationDrawer(),
           appBar: AppBar(
             bottomOpacity: 0.0,
             elevation: 0.0,
@@ -41,7 +43,8 @@ class MyApp extends StatelessWidget {
               )
             ],
           ),
-          body: Center(
+          body: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[

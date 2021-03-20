@@ -20,7 +20,6 @@ class _MainStatsState extends State<MainStats> {
   void initState() {
     super.initState();
     futureCovidStats = fetchCovidMainData();
-    print(futureCovidStats);
   }
 
   @override
@@ -32,10 +31,9 @@ class _MainStatsState extends State<MainStats> {
           return Column(
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     StatBlock(
                       icon: FaIcon(
@@ -43,9 +41,9 @@ class _MainStatsState extends State<MainStats> {
                         size: 25,
                       ),
                       title: AppLocalizations.of(context)!
-                          .translate('todayConfirmedCases'),
+                          .translate('confirmedCases'),
                       value: NumberFormat.decimalPattern()
-                          .format(snapshot.data!.todayConfirmedCases),
+                          .format(snapshot.data!.confirmedCases),
                     ),
                     StatBlock(
                       icon: FaIcon(
@@ -53,10 +51,18 @@ class _MainStatsState extends State<MainStats> {
                         size: 25,
                       ),
                       title: AppLocalizations.of(context)!
-                          .translate('confirmedCases'),
+                          .translate('totallyConfirmedCases'),
                       value: NumberFormat.decimalPattern()
-                          .format(snapshot.data!.confirmedCases),
+                          .format(snapshot.data!.totallyConfirmedCases),
                     ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
                     StatBlock(
                       icon: FaIcon(
                         FontAwesomeIcons.virusSlash,
@@ -67,15 +73,6 @@ class _MainStatsState extends State<MainStats> {
                       value: NumberFormat.decimalPattern()
                           .format(snapshot.data!.healing),
                     ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
                     StatBlock(
                       icon: FaIcon(
                         FontAwesomeIcons.microscope,
@@ -86,6 +83,14 @@ class _MainStatsState extends State<MainStats> {
                       value: NumberFormat.decimalPattern()
                           .format(snapshot.data!.testsPerfomed),
                     ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
                     StatBlock(
                       icon: FaIcon(
                         FontAwesomeIcons.houseUser,

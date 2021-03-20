@@ -1,6 +1,6 @@
 {
+  "totallyConfirmedCases": "Potvrzené případy celkem",
   "confirmedCases": "Potvrzené případy",
-  "todayConfirmedCases": "Dnešní potvrzené případy",
   "activeCases": "Aktivní případy",
   "testsPerformed": "Provedené testy",
   "healing": "Počet zotavených",
