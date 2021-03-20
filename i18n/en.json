@@ -1,0 +1,8 @@
+{
+  "confirmedCases": "Confirmed cases",
+  "todayConfirmedCases": "Confirmed cases today",
+  "activeCases": "Active cases",
+  "testsPerformed": "Tests performed",
+  "healing": "Recovery from covid19",
+  "death": "Death with covid19"
+}
