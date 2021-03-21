@@ -49,8 +49,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - i18n/en.json
-    - i18n/cs.json
+    - assets/i18n/en.json
+    - assets/i18n/cs.json
 
   # To add assets to your application, add an assets section, like this:
   # assets:

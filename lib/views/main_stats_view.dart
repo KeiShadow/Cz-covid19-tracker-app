@@ -1,7 +1,7 @@
 import 'package:covid19_stats/Localization/app_localizations.dart';
-import 'package:covid19_stats/Model/MainOverview.dart';
-import 'package:covid19_stats/Stats/StatBlock.dart';
-import 'package:covid19_stats/fetch.dart';
+import 'package:covid19_stats/model/covid_api_model.dart';
+import 'package:covid19_stats/services/fetch.dart';
+import 'package:covid19_stats/widgets/stat_block.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

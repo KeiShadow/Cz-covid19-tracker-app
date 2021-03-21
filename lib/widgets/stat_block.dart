@@ -12,12 +12,12 @@ class StatBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double c_width = MediaQuery.of(context).size.width * 0.3;
+    double cWidth = MediaQuery.of(context).size.width * 0.3;
 
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Container(
-          width: c_width,
+          width: cWidth,
           height: 120,
           decoration: BoxDecoration(
               color: Theme.of(context).backgroundColor,

@@ -1,10 +1,7 @@
-import 'dart:ffi';
-
-import 'package:covid19_stats/CustomNavigationDrawer/CollapsingListTile.dart';
-import 'package:covid19_stats/Model/NavigationModel.dart';
+import 'package:covid19_stats/model/navigation_model.dart';
+import 'package:covid19_stats/widgets/navigation_drawer/collapsing_list_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CollapsingNavigationDrawer extends StatefulWidget {
   @override
@@ -39,7 +36,7 @@ class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
   Widget getWidget(context, widget) {
     return Container(
       width: widthAnimation.value,
-      color: Theme.of(context).backgroundColor,
+      color: Color.fromARGB(255, 254, 250, 251),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

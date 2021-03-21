@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:covid19_stats/Model/MainOverview.dart';
+import 'package:covid19_stats/model/covid_api_model.dart';
 import 'package:http/http.dart' as http;
 
 Future<CovidOverview> fetchCovidMainData() async {
