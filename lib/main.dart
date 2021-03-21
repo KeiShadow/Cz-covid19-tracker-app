@@ -32,25 +32,30 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: theme.getTheme(),
         home: Scaffold(
-          drawer: CollapsingNavigationDrawer(),
-          appBar: AppBar(
-            bottomOpacity: 0.0,
-            elevation: 0.0,
-            actions: [
+          body: Stack(
+            // fit: StackFit.passthrough,
+            children: [
               Padding(
-                padding: const EdgeInsets.all(15),
-                child: AnimatedSwitch(theme: theme),
-              )
+                padding: const EdgeInsets.only(top: 35.0, right: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [AnimatedSwitch(theme: theme)],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 60.0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      MainStats(),
+                    ],
+                  ),
+                ),
+              ),
+              CollapsingNavigationDrawer(),
             ],
-          ),
-          body: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                MainStats(),
-              ],
-            ),
           ), // This trailing comma makes auto-formatting nicer for build methods.
         ),
       ),

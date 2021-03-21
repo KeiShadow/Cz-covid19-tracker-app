@@ -12,7 +12,7 @@ class ThemeNotifier with ChangeNotifier {
     accentIconTheme: IconThemeData(color: Colors.black),
     dividerColor: Colors.black12,
     cardColor: Colors.black54,
-    shadowColor: Colors.grey.withOpacity(0.1),
+    shadowColor: Colors.grey.withOpacity(0.2),
   );
 
   final lightTheme = ThemeData(
