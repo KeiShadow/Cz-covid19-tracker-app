@@ -1,22 +1,18 @@
+import 'package:covid19_stats/config/themes/theme.dart';
 import 'package:flutter/material.dart';
 
 ThemeData lightTheme = ThemeData(
-  scaffoldBackgroundColor: Colors.white,
-  primarySwatch: Colors.grey,
-  primaryColor: Colors.grey,
-  brightness: Brightness.light,
-  backgroundColor: Colors.grey[200],
-  accentColor: Colors.white,
-  accentIconTheme: IconThemeData(color: Colors.white),
-  dividerColor: Colors.white54,
-  cardColor: Colors.white,
-  shadowColor: Colors.grey.withOpacity(0.2),
+  primaryColor: primaryColor,
+  fontFamily: 'DM Sans',
   textTheme: TextTheme(
     headline6: TextStyle(
-        fontSize: 30.0,
-        fontWeight: FontWeight.w800,
-        letterSpacing: 2.0,
+        fontSize: 36.0,
+        fontWeight: FontWeight.w700,
+        letterSpacing: 1.5,
         color: Colors.black),
-    subtitle1: TextStyle(fontSize: 14.0, color: Colors.red),
+    subtitle1: TextStyle(
+        fontSize: 12.0, color: primaryColor, fontWeight: FontWeight.w700),
+    subtitle2:
+        TextStyle(fontSize: 14.0, color: secondaryColor.shade800, height: 1.8),
   ),
 );

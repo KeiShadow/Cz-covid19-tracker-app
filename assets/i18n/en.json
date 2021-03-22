@@ -1,4 +1,9 @@
 {
+  "overview": "Overview",
+  "symptoms": "Symptoms",
+  "protection": "Protection",
+  "covid19Subtitle": "Covid-19 Disease",
+  "whatIsCovid": "Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.",
   "totallyConfirmedCases": "Confirmed cases totally",
   "confirmedCases": "Confirmed cases",
   "activeCases": "Active cases",

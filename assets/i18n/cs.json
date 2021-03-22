@@ -1,4 +1,9 @@
 {
+  "overview": "Přehled",
+  "symptoms": "Symptomy",
+  "protection": "Protekce",
+  "covid19Subtitle": "Nemoc Covid-19",
+  "whatIsCovid": "COVID-19 je označení pro infekční onemocnění způsobené nově objeveným koronavirem.",
   "totallyConfirmedCases": "Potvrzené případy celkem",
   "confirmedCases": "Potvrzené případy",
   "activeCases": "Aktivní případy",

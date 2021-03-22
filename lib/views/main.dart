@@ -1,6 +1,6 @@
 import 'package:covid19_stats/Localization/app_localizations.dart';
 import 'package:covid19_stats/config/themes/light_theme.dart';
-import 'package:covid19_stats/views/covid_summary_view.dart';
+import 'package:covid19_stats/views/summary_view/overview_view.dart';
 import 'package:covid19_stats/widgets/navigation_drawer/collapsing_navigation_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -37,9 +37,11 @@ class HomeScreen extends StatelessWidget {
         // fit: StackFit.passthrough,
         children: [
           Padding(
-              padding: EdgeInsets.only(left: 100, top: 100.0),
+              padding: EdgeInsets.only(left: 110, top: 100.0),
               child: CovidSummaryView()),
-          CollapsingNavigationDrawer(),
+          Container(
+              decoration: BoxDecoration(color: Colors.white),
+              child: CollapsingNavigationDrawer()),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
