@@ -1,7 +1,6 @@
 import 'package:covid19_stats/config/themes/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CollapsingListTile extends StatefulWidget {
   final String? title;
