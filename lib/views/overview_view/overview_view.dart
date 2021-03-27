@@ -1,14 +1,15 @@
 import 'package:covid19_stats/Localization/app_localizations.dart';
+import '../../config/navigation/navigation_bloc.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CovidSummaryView extends StatefulWidget {
+class OverviewView extends StatefulWidget with NavigationStates {
   @override
-  _CovidSummaryViewState createState() => _CovidSummaryViewState();
+  _OverviewViewState createState() => _OverviewViewState();
 }
 
-class _CovidSummaryViewState extends State<CovidSummaryView> {
+class _OverviewViewState extends State<OverviewView> {
   @override
   Widget build(BuildContext context) {
     return Column(

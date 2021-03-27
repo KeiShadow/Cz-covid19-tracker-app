@@ -1,6 +1,7 @@
 import 'package:covid19_stats/config/themes/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 class SidebarItem extends StatelessWidget {
   final String? title;
@@ -12,31 +13,63 @@ class SidebarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Transform.rotate(
-        angle: -1.58,
-        child: GestureDetector(
-          behavior: HitTestBehavior.translucent,
-          onTap: () => onTap!(),
-          child: Column(
-            children: [
-              AnimatedDefaultTextStyle(
-                  child: Text(
-                    title!,
-                  ),
-                  style: isSelected!
-                      ? listSelectedTextStyle
-                      : listTileDefaultTextStyle,
-                  duration: Duration(milliseconds: 200)),
-              AnimatedContainer(
-                height: 6,
-                width: 6,
-                duration: Duration(milliseconds: 200),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: isSelected! ? Colors.black : Colors.transparent),
-              )
-            ],
-          ),
-        ));
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      // crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Container(
+          child: GestureDetector(
+              behavior: HitTestBehavior.translucent,
+              onTap: () => onTap!(),
+              child: RotatedBox(
+                quarterTurns: -1,
+                child: AnimatedDefaultTextStyle(
+                    child: Text(
+                      title!,
+                    ),
+                    style: isSelected!
+                        ? listSelectedTextStyle
+                        : listTileDefaultTextStyle,
+                    duration: Duration(milliseconds: 200)),
+              )),
+        ),
+        AnimatedContainer(
+          height: 8,
+          width: 8,
+          duration: Duration(milliseconds: 200),
+          decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: isSelected! ? primaryColor : Colors.transparent),
+        )
+      ],
+    );
+
+    // Transform.rotate(
+    //     angle: -1.57,
+    //     child: GestureDetector(
+    //       behavior: HitTestBehavior.translucent,
+    //       onTap: () => onTap!(),
+    //       child: Column(
+    //         children: [
+    //           AnimatedDefaultTextStyle(
+    //               child: Text(
+    //                 title!,
+    //               ),
+    //               style: isSelected!
+    //                   ? listSelectedTextStyle
+    //                   : listTileDefaultTextStyle,
+    //               duration: Duration(milliseconds: 200)),
+    //           AnimatedContainer(
+    //             height: 6,
+    //             width: 6,
+    //             duration: Duration(milliseconds: 200),
+    //             decoration: BoxDecoration(
+    //                 shape: BoxShape.circle,
+    //                 color: isSelected! ? Colors.black : Colors.transparent),
+    //           )
+    //         ],
+    //       ),
+    //     ));
   }
 }

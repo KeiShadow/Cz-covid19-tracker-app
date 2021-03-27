@@ -1,7 +1,11 @@
-import 'package:covid19_stats/Localization/app_localizations.dart';
-import 'package:covid19_stats/config/themes/light_theme.dart';
-import 'package:covid19_stats/views/summary_view/overview_view.dart';
-import 'package:covid19_stats/widgets/custom_sidebar/sidebar_widget.dart';
+import 'package:covid19_stats/views/overview_view/overview_view.dart';
+
+import '../config/navigation/navigation_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../Localization/app_localizations.dart';
+import '../config/themes/light_theme.dart';
+import '../widgets/custom_sidebar/sidebar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -22,7 +26,6 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
       ],
       theme: lightTheme,
-      title: 'Flutter Demo',
       home: HomeScreen(),
     );
   }
@@ -33,17 +36,20 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        // fit: StackFit.passthrough,
-        children: [
-          Padding(
-              padding: EdgeInsets.only(left: 110, top: 100.0),
-              child: CovidSummaryView()),
-          // Container(
-          //     decoration: BoxDecoration(color: Colors.white),
-          //     child: CollapsingNavigationDrawer()),
-          SidebarWidget(),
-        ],
+      body: BlocProvider<NavigationBloc>(
+        create: (cotnext) => NavigationBloc(OverviewView()),
+        child: Stack(
+          children: [
+            BlocBuilder<NavigationBloc, NavigationStates>(
+              builder: (context, navigationState) {
+                return Padding(
+                    padding: EdgeInsets.only(left: 110, top: 90.0),
+                    child: navigationState as Widget);
+              },
+            ),
+            SidebarWidget(),
+          ],
+        ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
