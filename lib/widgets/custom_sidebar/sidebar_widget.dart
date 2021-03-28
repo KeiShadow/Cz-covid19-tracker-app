@@ -1,7 +1,7 @@
+import '../../widgets/custom_sidebar/background_widget.dart';
+
 import '../../Localization/app_localizations.dart';
 import '../../config/navigation/navigation_bloc.dart';
-import '../../config/themes/theme.dart';
-import '../../widgets/custom_sidebar/sidebar_clipper.dart';
 import '../../widgets/custom_sidebar/sidebar_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -50,25 +50,9 @@ class _SidebarWidgetState extends State<SidebarWidget> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned(
-          width: 110,
-          left: 0,
-          bottom: 0,
-          top: 0,
-          child: ClipPath(
-            clipper: SidebarClipper(
-              (startYPosition == null || selectedWidgetSize == null)
-                  ? 0
-                  : startYPosition! - 20,
-              (startYPosition == null || selectedWidgetSize == null)
-                  ? 0
-                  : startYPosition! + selectedWidgetSize!.width + 20,
-            ),
-            child: Container(
-              decoration: BoxDecoration(color: drawerBackground),
-            ),
-          ),
-        ),
+        BackgroundWidget(
+            startYPosition: startYPosition,
+            selectedWidgetSize: selectedWidgetSize),
         Positioned(
             width: 90,
             left: 0,

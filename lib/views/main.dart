@@ -1,4 +1,4 @@
-import 'package:covid19_stats/views/overview_view/overview_view.dart';
+import '../views/overview_view/overview_view.dart';
 
 import '../config/navigation/navigation_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,7 +32,6 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +49,7 @@ class HomeScreen extends StatelessWidget {
             SidebarWidget(),
           ],
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }

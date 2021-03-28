@@ -12,7 +12,10 @@ ThemeData lightTheme = ThemeData(
         color: Colors.black),
     subtitle1: TextStyle(
         fontSize: 12.0, color: primaryColor, fontWeight: FontWeight.w700),
-    subtitle2:
-        TextStyle(fontSize: 14.0, color: secondaryColor.shade800, height: 1.8),
+    subtitle2: TextStyle(
+        fontSize: 14.0,
+        color: secondaryColor.shade700,
+        height: 1.8,
+        fontWeight: FontWeight.w400),
   ),
 );

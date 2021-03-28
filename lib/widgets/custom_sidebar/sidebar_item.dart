@@ -1,7 +1,6 @@
-import 'package:covid19_stats/config/themes/theme.dart';
+import '../../config/themes/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
 
 class SidebarItem extends StatelessWidget {
   final String? title;
@@ -15,7 +14,6 @@ class SidebarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.max,
-      // crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
@@ -44,32 +42,5 @@ class SidebarItem extends StatelessWidget {
         )
       ],
     );
-
-    // Transform.rotate(
-    //     angle: -1.57,
-    //     child: GestureDetector(
-    //       behavior: HitTestBehavior.translucent,
-    //       onTap: () => onTap!(),
-    //       child: Column(
-    //         children: [
-    //           AnimatedDefaultTextStyle(
-    //               child: Text(
-    //                 title!,
-    //               ),
-    //               style: isSelected!
-    //                   ? listSelectedTextStyle
-    //                   : listTileDefaultTextStyle,
-    //               duration: Duration(milliseconds: 200)),
-    //           AnimatedContainer(
-    //             height: 6,
-    //             width: 6,
-    //             duration: Duration(milliseconds: 200),
-    //             decoration: BoxDecoration(
-    //                 shape: BoxShape.circle,
-    //                 color: isSelected! ? Colors.black : Colors.transparent),
-    //           )
-    //         ],
-    //       ),
-    //     ));
   }
 }
